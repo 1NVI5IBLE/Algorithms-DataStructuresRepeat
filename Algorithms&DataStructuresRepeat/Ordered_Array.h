@@ -47,6 +47,10 @@ public:
 		++size;
 	}
 
+	int lenght() const {
+		return size;
+	}
+
 
 };
 
