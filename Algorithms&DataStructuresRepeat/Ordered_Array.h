@@ -58,6 +58,7 @@ public:
 		return T();
 	}
 
+	
 	bool remove(int index) {
 		if (index < 0 || index >= size) {
 			return false;
@@ -86,5 +87,11 @@ public:
 		return -1;
 	}
 
+	void clear() {
+		delete[] elements;
+		size = 0;
+		capacity = growSize;
+		elements = new T[capacity];
+	}
 };
 
