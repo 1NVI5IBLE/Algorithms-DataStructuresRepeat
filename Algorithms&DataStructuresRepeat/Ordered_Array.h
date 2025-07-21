@@ -32,6 +32,20 @@ public:
 	~OrderedArray() {
 		delete[] elements;
 	}
+	
+	void push(const T& newElement) {
+		if (size == capacity) {
+			resize();
+		}
+
+		int i = size - 1;
+		while (i >= 0 && elements[i] > newElement) {
+			elements[i + 1] = elements[i];
+			--i;
+		}
+		elements[i + 1] = newElement;
+		++size;
+	}
 
 
 };
