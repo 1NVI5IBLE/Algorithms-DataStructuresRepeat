@@ -77,7 +77,10 @@ public:
 		while (left <= right) {
 			int middle = (left + right) / 2;
 
-			if (elements[middle] < target) {
+			if (elements[middle] == target) {
+				return middle;
+			}
+			else if (elements[middle] < target) {
 				left = middle + 1;
 			}
 			else {
