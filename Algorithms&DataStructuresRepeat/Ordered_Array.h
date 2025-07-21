@@ -12,7 +12,7 @@ private:
 		int newCapacity = capacity + growSize;
 		T* newElements = new T[newCapacity];
 		for (int i = 0; i < size; i++) {
-			newElements[i] = elements[i]
+			newElements[i] = elements[i];
 		}
 		delete[] elements;
 		elements = newElements;
@@ -26,7 +26,7 @@ public:
 	}
 
 	OrderedArray(int grow_size) : size(0), capacity(grow_size), growSize(grow_size) {
-		elements = new T[capacity]
+		elements = new T[capacity];
 	}
 
 	~OrderedArray() {
@@ -47,7 +47,7 @@ public:
 		++size;
 	}
 
-	int lenght() const {
+	int length() const {
 		return size;
 	}
 
@@ -81,7 +81,7 @@ public:
 				left = middle + 1;
 			}
 			else {
-				right = mid - 1;
+				right = middle - 1;
 			}
 		}
 		return -1;
