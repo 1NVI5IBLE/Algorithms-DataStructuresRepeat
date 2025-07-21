@@ -58,6 +58,33 @@ public:
 		return T();
 	}
 
+	bool remove(int index) {
+		if (index < 0 || index >= size) {
+			return false;
+		}
+		for (int i = index; i < size - 1; ++i) {
+			elements[i] = elements[i + 1];
+		}
+		--size;
+		return true;
+	}
+
+	int search(const T& target) const {
+		int left = 0;
+		int right = size - 1;
+
+		while (left <= right) {
+			int middle = (left + right) / 2;
+
+			if (elements[middle] < target) {
+				left = middle + 1;
+			}
+			else {
+				right = mid - 1;
+			}
+		}
+		return -1;
+	}
 
 };
 
