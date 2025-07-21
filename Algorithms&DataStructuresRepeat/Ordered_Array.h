@@ -18,6 +18,8 @@ public:
 		elements = new T[capacity]
 	}
 
-
+	~OrderedArray() {
+		delete[] elements;
+	}
 };
 
