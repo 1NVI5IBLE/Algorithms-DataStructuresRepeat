@@ -8,6 +8,17 @@ private:
 	int capacity;
 	int growSize;
 
+	void resize() {
+		int newCapacity = capacity + growSize;
+		T* newElements = new T[newCapacity];
+		for (int i = 0; i < size; i++) {
+			newElements[i] = elements[i]
+		}
+		delete[] elements;
+		elements = newElements;
+		capacity = newCapacity;
+	}
+
 public:
 
 	OrderedArray() : size(0), capacity(10), growSize(10) {
@@ -21,5 +32,7 @@ public:
 	~OrderedArray() {
 		delete[] elements;
 	}
+
+
 };
 
