@@ -130,6 +130,7 @@
     <ClCompile Include="Algorithms&amp;DataStructuresRepeat.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MySet.h" />
     <ClInclude Include="Ordered_Array.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
