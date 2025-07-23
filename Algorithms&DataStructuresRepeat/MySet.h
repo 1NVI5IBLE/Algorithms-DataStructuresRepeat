@@ -15,4 +15,8 @@ public:
 	int lenght() const {
 		return data.length();
 	}
+
+	T getElement(int index) const {
+		return data.getElement(index);
+	}
 };
