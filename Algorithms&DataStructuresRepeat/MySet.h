@@ -10,4 +10,9 @@ public:
 	MySet() = default;
 
 	MySet(int grow_size) : data(grow_size) {}
+
+
+	int lenght() const {
+		return data.length();
+	}
 };
