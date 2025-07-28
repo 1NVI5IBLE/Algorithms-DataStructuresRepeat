@@ -33,6 +33,8 @@ public:
 			result.add(this->getElement(i));
 		}
 
+		//other set will go here
+
 	}
 
 };
