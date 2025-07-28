@@ -19,4 +19,20 @@ public:
 	T getElement(int index) const {
 		return data.getElement(index);
 	}
+
+	void add(const T& element) {
+		if (data.search(element) == -1) {
+			data.push(element);
+		}
+	}
+
+	MySet<T> operator | (const MySet<T>& other) const {
+		MySet<T> result;
+
+		for (int i = 0; i < this->lenght(); i++) {
+			result.add(this->getElement(i));
+		}
+
+	}
+
 };
